@@ -1,0 +1,37 @@
+buildscript {
+    ext {
+        springBootVersion = '2.1.9.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+        jcenter()
+//    jcenter()  -> jCenter() 해당 기능도 mavenCentral() 에서 마이그레이션
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+//plugins {
+//    id 'java'
+//    id 'eclipse'
+//    id 'org.springframework.boot'
+//    id 'io.spring.dependency-management'
+//}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+group 'com.amsomad.book'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+      implementation('org.springframework.boot:spring-boot-starter-web')
+      testImplementation('org.springframework.boot:spring-boot-starter-test')
+}
