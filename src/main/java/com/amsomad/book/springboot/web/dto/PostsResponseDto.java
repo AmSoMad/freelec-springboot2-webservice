@@ -7,6 +7,7 @@ import lombok.Getter;
 @Getter
 public class PostsResponseDto {
 
+
     private Long id;
     private String title;
     private String content;
@@ -20,5 +21,4 @@ public class PostsResponseDto {
         this.author = entity.getAuthor();
 
     }
-
 }

@@ -1,6 +1,9 @@
 package com.amsomad.book.springboot.domain.posts;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+
+import java.util.List;
 
 public interface PostsRepository extends JpaRepository<Posts, Long> {
     // JpaRepository<entity 클래스, pk타입>
@@ -10,5 +13,7 @@ public interface PostsRepository extends JpaRepository<Posts, Long> {
     또한 entity클랙스는 Repository 없으면 그냥 의미없는 클래스
      */
 
+    @Query("SELECT p FROM Posts p ORDER BY p.id DESC ")
+    List<Posts> findAllDesc();
 
 }
