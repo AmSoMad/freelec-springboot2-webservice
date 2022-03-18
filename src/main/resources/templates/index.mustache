@@ -14,6 +14,9 @@
             {{/userName}}
             {{^userName}}
                 <a href="/oauth2/authorization/google" class="btn btn-success active" role="button">Google Login</a>
+
+                <!--     /naver URL은 oauth.properties 에서 잡아둔 redirect-uri 에 자동으로 등록된다.        -->
+                <a href="/oauth2/authorization/naver" class="btn btn-secondary active" role="button">Naver Login</a>
             {{/userName}}
 
         </div>

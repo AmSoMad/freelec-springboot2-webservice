@@ -47,6 +47,9 @@ dependencies {
     //데이터베이스를 세션저장소로 사용
     implementation('org.springframework.session:spring-session-jdbc')
 
+    //스프링 시큐리티 테스트
+
+    testImplementation('org.springframework.security:spring-security-test')
     testImplementation('org.springframework.boot:spring-boot-starter-test')
     testImplementation('org.projectlombok:lombok')
     testAnnotationProcessor('org.projectlombok:lombok')
